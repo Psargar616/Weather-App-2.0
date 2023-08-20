@@ -3,7 +3,7 @@
 Created this weather app using HTML, CSS and JS.
 ![ss1](Screenshots/screencapture3.png)
 ![ss2](Screenshots/screencapture1.png)
-![ss3](Screenshots/screencapture1.png)
+![ss3](Screenshots/screencapture2.png)
 
 ## Demo Link
 [Link](https://psargar616.github.io/Weather-App-2.0/)
