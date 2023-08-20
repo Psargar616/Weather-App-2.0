@@ -16,9 +16,10 @@
 
 
 .wrapper{
-    width:100vw;
+    box-sizing: border-box;
+    width:100%;
     height:max-content;
-
+    padding: 0.5rem;
     color: var(--colorLight2);
     background: hsl(161, 59%, 54%);  /* fallback for old browsers */
     background: -webkit-linear-gradient(to left, #185a9d, #43cea2);  /* Chrome 10-25, Safari 5.1-6 */
