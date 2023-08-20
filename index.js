@@ -84,7 +84,7 @@ async function fetchUserWeatherInfo(coordinates) {
 }
 
 function renderWeatherInfo(weatherInfo) {
-  //fistly, we have to fethc the elements
+  //fistly, we have to fethch the elements
 
   const cityName = document.querySelector("[data-cityName]");
   const countryIcon = document.querySelector("[data-countryIcon]");
@@ -112,7 +112,7 @@ function getLocation() {
   if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(showPosition);
   } else {
-    //HW - show an alert for no gelolocation support available
+    alert("no gelolocation support available");
   }
 }
 
@@ -140,31 +140,28 @@ searchForm.addEventListener("submit", (e) => {
 });
 
 const errorPage = document.querySelector(".error-page");
+
 async function fetchSearchWeatherInfo(city) {
- 
-    loadingScreen.classList.add("active");
-    userInfoContainer.classList.remove("active");
-    grantAccessContainer.classList.remove("active");
+  loadingScreen.classList.add("active");
+  userInfoContainer.classList.remove("active");
+  grantAccessContainer.classList.remove("active");
 
-    try {
-      const response = await fetch(
-        `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}&units=metric`
-      );
-      const data = await response.json();
+  try {
+    const response = await fetch(
+      `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}&units=metric`
+    );
+    const data = await response.json();
 
-      if(response.status == 404){
-        loadingScreen.classList.remove("active");
+    if (response.status == 404) {
+      loadingScreen.classList.remove("active");
       userInfoContainer.classList.remove("active");
       errorPage.classList.add("active");
-
-      }else{
-        loadingScreen.classList.remove("active");
-        userInfoContainer.classList.add("active");
-        renderWeatherInfo(data);
-      }
-      
-    } catch (err) {
-      console.log("error" , err);
+    } else {
+      loadingScreen.classList.remove("active");
+      userInfoContainer.classList.add("active");
+      renderWeatherInfo(data);
     }
-  
+  } catch (err) {
+    console.log("error", err);
+  }
 }
