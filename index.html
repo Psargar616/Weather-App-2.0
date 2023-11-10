@@ -14,14 +14,15 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <!-- wrapper -->
     <div class="wrapper">
       <h1>Weather App</h1>
-
+      <!-- switching tabs -->
       <div class="tab-container">
         <p class="tab" data-userWeather>Your Weather</p>
         <p class="tab" data-searchWeather>Search Weather</p>
       </div>
-
+      <!-- weather data container -->
       <div class="weather-container">
         <!-- grant location container-->
         <div class="sub-container grant-location-container">
@@ -93,14 +94,12 @@
               <p data-cloudiness></p>
             </div>
           </div>
-        </div>
+        </div> 
 
         <!-- error page -->
-        <div class=" sub-container error-page" >
-            <h2>Invalid City Name</h2>
-            <img src="./images/not-found.png" alt="" width="300" height="300">
-
-
+        <div class="sub-container error-page">
+          <h2>Invalid City Name</h2>
+          <img src="./images/not-found.png" alt="" width="300" height="300" />
         </div>
       </div>
     </div>

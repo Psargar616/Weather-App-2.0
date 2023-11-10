@@ -20,3 +20,6 @@ Created this weather app using HTML, CSS and JS.
 - Using try and catch blocks for error handling
 - Using template literals 
 - Using 'Optional Chaining operator' to access nested properties and methods of an object
+- Using CSS custom variables
+- Using custom 'data-' attributes
+- Using CSS properties such as 'all : unset', 'margin-block: 4rem', 'appearance: none'

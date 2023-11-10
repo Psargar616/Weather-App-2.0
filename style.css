@@ -39,7 +39,8 @@
 h1 {
   text-align: center;
   text-transform: uppercase;
-  padding-top: 2rem;
+  padding-top: 3rem;
+  font-size: 3rem;
 }
 
 .tab-container {
@@ -66,11 +67,14 @@ h1 {
 }
 
 .weather-container {
+    /* margin-block used to add top and bottom margins */
   margin-block: 4rem;
 }
 
 .btn {
+    /* to remove default styles all: unset */
   all: unset;
+  /* another way */
   /* appearance: none;
     border:none;
     color: white; */
@@ -89,6 +93,7 @@ h1 {
   align-items: center;
 }
 
+/* initially hidden */
 .grant-location-container {
   display: none;
 }
@@ -113,7 +118,7 @@ h1 {
   margin-bottom: 1.75rem;
   letter-spacing: 0.75px;
 }
-
+/* initially hidden */
 .loading-container {
   display: none;
 }
@@ -126,9 +131,10 @@ h1 {
   text-transform: uppercase;
 }
 
+/* initially hidden */
 .user-info-container {
   display: none;
-  transition: all 1s ease-in;
+  transition: all 0.5s ease-in;
 }
 
 .user-info-container.active {
